@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+:root {
+    --design-primary: #9b51e0;
+    --design-seconday: #FF719C;
+    --design-tertiary: #F8ABC2;
+    --design-gray: #EFEFF0
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.bg-pink {
+    background-color: var(--design-primary);
+}
+
+.bg-pink-secondary {
+    background-color: var(--design-seconday);
+}
+
+/* login page */
+
+
+.background-login {
+    background-image: url("https://penerbitdeepublish.com/wp-content/uploads/2021/05/Tipe-mengajar-dosen-masa-kini.jpg");
+    /* object-fit: cover; */
+    /* object-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-login {
+    background-color: var(--design-primary);
+    color: white;
+    padding: 10px 40px;
+    font-weight: 500;
+}
+
+.btn-login:hover {
+
+    color: rgb(217, 217, 217);
+}
+
+.border-input-pink {
+    border-color: var(--design-primary);
+}
+
+/* dashboard */
+
+#sidebar {
+    transition: width 0.6s ease;
+}
+
+
+#sidebar .nav-link {
+    color: black;
+
+    &&:hover {
+        background-color: var(--design-seconday);
+        color: white;
+    }
+}
+
+
+/* table */
+
+
+
+.table-custom td,
+.table-custom th {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.table-custom {
+    border-radius: 90px;
+}
+
+.table-custom tr th {
+    color: white;
+    padding: 10px;
+    background-color: var(--design-primary);
+    text-overflow: ellipsis;
+    /* white-space: nowrap; */
+    overflow: hidden;
+}
+
+
+.table-custom td {
+    border-bottom: 1px solid rgb(198, 198, 198);
+    font-weight: 500;
+}
+
+.table-custom tr td a{
+    color: black;
+    text-decoration: none;
+    &&:hover{
+        text-decoration: underline;
+    }
+}
+
+
+#sidebar {
+    width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: var(--design-primary);
+    display: flex;
+    flex-direction: column;
+}
+
+@media only screen and (max-width: 600px) {
+    #sidebar{
+        position: fixed;
+    }
+    #content{
+        margin-left: 17%;
+    }
+}
+
+#sidebar.expand {
+    width: 240px;
+    min-width: 260px;
+}
+
+.toggle-btn {
+    cursor: pointer;
+    border: 0;
+}
+
+
+.sidebar-logo {
+    margin: auto 0;
+}
+
+.sidebar-logo a {
+    color: #FFF;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.link-item span, #sidebar:not(.expand) #nav-title {
+    display: none;
+}
+
+.sidebar-nav {
+    padding: 2rem 0;
+    flex: 1 1 auto;
+}
+
+
+
+
+
+a.link-item {
+    padding: .625rem 1.625rem;
+    text-decoration: none;
+    color: #FFF;
+    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.link-item i {
+    font-size: 1.1rem;
+    margin-right: .75rem;
+}
+
+a.link-item:hover {
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 3px solid #ffffff;
+}
+
+.sidebar-item {
+    position: relative;
+}
