@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 :root {
-    --design-primary: #9b51e0;
+    --design-primary: #fd417a;
     --design-seconday: #FF719C;
     --design-tertiary: #F8ABC2;
     --design-gray: #EFEFF0
@@ -113,7 +113,7 @@ body {
     flex-direction: column;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 770px) {
     #sidebar{
         position: fixed;
     }

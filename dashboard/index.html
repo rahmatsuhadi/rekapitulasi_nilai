@@ -31,7 +31,7 @@
 
             <ul class="sidebar-nav">
                 <li class="sidebar-item">
-                    <a href="#" class="link-item">
+                    <a href="./index.html" class="link-item">
                         <i class="fa-solid fa-gauge-high" style="height: 30px; width: 30px;"></i>
                         <span>Dashboard</span>
                     </a>
@@ -43,16 +43,15 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
-                    <a href="#" class="link-item">
+                    <a href="./bantuan.html" class="link-item">
                         <i class="fa-solid fa-circle-question" style="height: 30px; width: 30px;"></i>
                         <span>Bantuan</span>
 
                     </a>
-
                 </li>
 
                 <li class="sidebar-item">
-                    <a href="#" class="link-item">
+                    <a href="../login.html" class="link-item">
                         <i class="fa-solid fa-door-open" style="height: 30px; width: 30px;"></i>
                         <span>Keluar</span>
                     </a>
@@ -61,38 +60,59 @@
             </ul>
         </aside>
 
-        <main class="flex-grow-1" style="height: 100vh;overflow-y: auto;">
+        <main class="flex-grow-1 ps-md-0 ps-5" style="height: 100vh;overflow-y: auto;">
 
-            <div class="d-flex py-2 px-3 sticky-top bg-white shadow">
+            <div class="d-flex py-2 px-3 sticky-lg-top bg-white shadow">
 
-                <h3 class="fw-bold">Dashboard</h3>
-                <div class="ms-auto">
-                    <button type="button" class="btn  fs-6 rounded-circle"
-                        style="background-color: rgb(237, 237, 237);">
-                        <i class="fa-regular fa-user"></i>
-                    </button>
+                <h3 class="fw-bold ms-4 ms-md-0">Rekap Data</h3>
+              
+
+                <div class="ms-auto d-flex align-items-center">
+
+
+                    <div class="dropdown ">
+                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownMenuButton1"
+                            type="button" class="btn   fs-6 rounded-circle"
+                            style="background-color: rgb(237, 237, 237);">
+                            <i class="fa-regular fa-user"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="./bantuan.html">Bantuan</a></li>
+                            <li><a class="dropdown-item" href="../login.html">Logout</a></li>
+                        </ul>
+                    </div>
                     <button type="button" class="btn text-danger fs-6">
                         <i class="fa-regular fa-bell"></i>
                     </button>
                 </div>
             </div>
 
-            <div class="container-lg mt-4 w-100">
+            <div class="container-lg  ps-5 px-lg-3 ps-4 mt-4 w-100">
 
                 <!--  -->
-                <div class="card bg-pink-secondary text-white w-100 mb-5 " style="width: 18rem;">
+                <!-- <div class="card bg-pink text-white w-100 mb-5 " style="width: 18rem;">
+                    
+                </div> -->
+
+                <div class="card mb-3">
+                    <div class="card-header bg-pink">
+                        <h6 class="text-white">
+                            Profile Dosen
+                        </h6>
+                    </div>
                     <div class="card-body flex-column flex-md-row d-flex gap-3">
-                        <div class="">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDFkppp15hnvqHiyqD-zxLqkyfUe2lHEGsSg&s" width="120" height="120"
-                                class="card-img-top" alt="...">
+                        <div class="d-flex">
+                            <img  src="../assets/images/placeholder-dosen.png" width="120" height="120"
+                                class="m-auto" alt="...">
                         </div>
                         <div>
                             <h5 class="card-title">Selamat Datang Kembali</h5>
-                            <p class="card-text fw-bold">
-                                RAHMAT SUHADI
-                            </p>
 
-                            <h5>23.01.4968</h5>
+                            <div class="mt-4">
+                                <h5 class="fw-bold">RAHMAT SUHADI</h5>
+                                <p class="card-text">Universitas Amikom Yogyakarta</p>
+                            </div>
 
                         </div>
                     </div>
@@ -126,9 +146,8 @@
                                 <td>03</td>
                                 <td>2</td>
                                 <td>Jumat, 13.30 - 15.00</td>
-                                <td><button class="btn px-2 py-1"
-                                        style="background-color: rgb(235, 235, 235);">Ya</button></td>
-                                
+                                <td><button class="btn px-2 py-1 w-75 bg-success text-white">Ya</button></td>
+
                             </tr>
                             <tr>
                                 <td scope="row">
@@ -144,9 +163,8 @@
                                 <td>01</td>
                                 <td>2</td>
                                 <td>Selasa, 08.50 - 10.10</td>
-                                <td><button class="btn px-2 py-1"
-                                        style="background-color: rgb(235, 235, 235);">Ya</button></td>
-                                
+                                <td><button class="btn px-2 py-1 w-75 bg-success text-white">Ya</button></td>
+
                             </tr>
                             <tr>
                                 <td scope="row">
@@ -162,9 +180,8 @@
                                 <td>01</td>
                                 <td>5</td>
                                 <td>Selasa, 08.50 - 10.10</td>
-                                <td><button class="btn px-2 py-1"
-                                        style="background-color: rgb(235, 235, 235);">Tidak</button></td>
-                                
+                                <td><button class="btn px-2 py-1 w-75 bg-danger text-white" >Tidak</button></td>
+
                             </tr>
                         </tbody>
                     </table>
