@@ -1,3 +1,27 @@
+
+<?php
+
+include_once './config/config.php';
+include_once './src/Controller/AuthController.php';
+
+session_start();
+
+if (isset($_SESSION['user_id'])) {
+    header("Location: dashboard");
+    exit();
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $identity = $_POST['identity'];
+    $password = $_POST['password'];
+
+    login($identity, $password);
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,15 +59,22 @@
                     <h4 class="text-center mb-4">Masuk Dashboard Dosen</h4>
 
                     <p class="text-center mb-4 m-auto fs-6" style="max-width: 70%;" >Masukan indentitas anda untuk mengakses dashboard</p>
+                    <?php
+                        // Menampilkan pesan error jika ada
+                        if (isset($_SESSION['error_message'])) {
+                            echo "<p style='color:red;'>{$_SESSION['error_message']}</p>";
+                            unset($_SESSION['error_message']);
+                        }
+                        ?>
 
-                    <form action="/action_page.php">
+                    <form  method="POST">
                         <div class="mb-3 mt-3">
                             <!-- <label for="email" class="form-label">Nomor:</label> -->
-                            <input type="text" class="form-control border-input-pink  form-control-md mb-4" id="email" placeholder="Nomor Induk Dosen" name="email">
+                            <input name="identity" type="text" class="form-control border-input-pink  form-control-md mb-4" id="email" placeholder="Nomor Induk Dosen" name="email">
                         </div>
                         <div class="mb-3">
                             <!-- <label for="pwd" class="form-label">Password:</label> -->
-                            <input type="password" class="form-control border-input-pink form-control-md mb-4" id="pwd" placeholder="Password"
+                            <input name="password" type="password" class="form-control border-input-pink form-control-md mb-4" id="pwd" placeholder="Password"
                                 name="pswd">
                         </div>
                         <!-- <div class="form-check mb-3">
@@ -51,9 +82,9 @@
                                 <input class="form-check-input" type="checkbox" name="remember"> Remember me
                             </label>
                         </div> -->
-                        <a href="./dashboard/index.html">
-                            <button type="button" class="btn btn-login  w-100">Login Page</button>
-                        </a>
+                        <div >
+                            <button type="submit" class="btn btn-login  w-100">Login Page</button>
+                        </div>
                     </form>
                     <div class="mt-3">                    
                         <a href="./register.html" class=" text-black fs-6">Daftar Dulu?</a>
@@ -79,6 +110,8 @@
                 </div>
             </div>
         </div>
+
+       
 
     </div>
 </body>
