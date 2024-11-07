@@ -96,8 +96,8 @@ include_once __DIR__.'/../config/config.php';
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="./bantuan.html">Bantuan</a></li>
-                            <li><a class="dropdown-item" href="./logout.php">Logout</a></li>
+                            <li><a class="dropdown-item" href="/dashboard/bantuan.html">Bantuan</a></li>
+                            <li><a class="dropdown-item" href="/dashboard/logout.php">Logout</a></li>
                         </ul>
                     </div>
                     <button type="button" class="btn text-danger fs-6">

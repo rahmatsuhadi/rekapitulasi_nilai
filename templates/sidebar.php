@@ -31,7 +31,7 @@ $role = $_SESSION['role'];
 
                 <!-- <?php if($role=="dosen"):?> -->
                     <li class="sidebar-item">
-                    <a href="./profile.php" class="link-item">
+                    <a href="/dashboard/profile.php" class="link-item">
                         <i class="fa-solid fa-chalkboard-user" style="height: 30px; width: 30px;"></i>
                         <span>Profile</span>
                     </a>
@@ -46,12 +46,14 @@ $role = $_SESSION['role'];
                     </a>
                 </li>
                 <?php endif; ?>
+                <?php if($role=="admin" || $role=="dosen"):?>
                 <li class="sidebar-item">
                     <a href="/dashboard/mahasiswa" class="link-item">
                         <i class="fa-solid fa-users" style="height: 30px; width: 30px;"></i>
                         <span>Mahasiswa</span>
                     </a>
                 </li>
+                <?php endif; ?>
                 <li class="sidebar-item">
                     <a href="/dashboard/bantuan.php" class="link-item">
                         <i class="fa-solid fa-circle-question" style="height: 30px; width: 30px;"></i>

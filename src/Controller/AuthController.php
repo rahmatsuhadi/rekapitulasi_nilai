@@ -1,10 +1,11 @@
 <?php
 
-include_once './config/config.php';
 include_once './src/Model/UserModel.php';
 
 function login($username, $password) {
-    $authModel = new UserModel();
+    $authModel = new User();
+
+    var_dump($authModel);
     $user = $authModel->verifyLogin($username, $password);
 
     if ($user) {
