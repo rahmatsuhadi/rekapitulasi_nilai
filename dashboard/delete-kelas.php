@@ -1,5 +1,5 @@
 <?php
-include_once "../../src/Model/MahasiswaModel.php";
+include_once "../src/Model/GradeModel.php";
 
 
 $id = $_GET['id'];
@@ -7,20 +7,20 @@ $id = $_GET['id'];
 
 if(isset($id)){
 
-    $mahasiswa = new Mahasiswa();
+    $grade = new Grade();
 
     session_start();
-        if($mahasiswa->delete($id)){
+        if($grade->delete($id)){
             $_SESSION['notification'] = [
                 'type' => 'success',
-                'message' => 'Dosen berhasil Dihapus!'
+                'message' => 'Kelas berhasil Dihapus!'
             ];
             header("location: ./index.php?pesan=success");
         }
         else{
             $_SESSION['notification'] = [
                 'type' => 'error',
-                'message' => 'Terjadi kesalahan saat menghapus Dosen.'
+                'message' => 'Terjadi kesalahan saat menghapus Kelas.'
             ];
             header("location: ./index.php?pesan=gagal");
     

@@ -22,14 +22,14 @@ $id =@$_GET['course_id'];
 
 
 
-                <div class="input-group mb-3 mt-3">
+                <!-- <div class="input-group mb-3 mt-3">
 
                     <input type="text" value="23.01.4968" class="form-control" name="searchMahasiswa" placeholder="Cari Nama/NIM"
                         aria-label="Recipient's username" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                         <button class="btn text-white bg-pink">Cari</button>
                     </div>
-                </div>
+                </div> -->
 
 
 
@@ -43,14 +43,17 @@ $id =@$_GET['course_id'];
                         <div class="col-12 col-lg-6">
                             <div class="mb-3">
                                 <label for="nama_mahasiswa" class="form-label">Nama Mahasiswa</label>
-                                <input type="text" value="<?=$course['full_name']?>" name="nama_mahasiswa" class="form-control" id="Nama_Mahasiswa"
-                                    placeholder="Nama Mahasiswa">
+                                <h5 class="form-control border-0">
+                                    <?=$course['full_name']?>
+                                </h5>
                             </div>
                         </div>
                         <div class="col-12 col-lg-6">
                             <div class="mb-3">
                                 <label for="nim" class="form-label">NIM</label>
-                                <input type="text" value="<?=$course['identity']?>" class="form-control" name="nim_mahasiswa" id="nim" placeholder="NIM">
+                                <h5 class="form-control border-0">
+                                    <?=$course['identity']?>
+                                </h5>
                             </div>
                         </div>
 
@@ -59,8 +62,8 @@ $id =@$_GET['course_id'];
                                 <label for="kehadiran" class="form-label">Kehadiran</label>
                                 <input type="number" value="<?=$course['presensi']?>"  name="presensi" class="form-control" id="kehadiran"
                                     placeholder="Kehadiran">
-                                <span style="font-size: 12px;" class="text-danger">Otomatis terisi/perubahan tidak
-                                    diijinkan</span>
+                                <!-- <span style="font-size: 12px;" class="text-danger">Otomatis terisi/perubahan tidak
+                                    diijinkan</span> -->
                             </div>
                         </div>
                         <div class="col-12">

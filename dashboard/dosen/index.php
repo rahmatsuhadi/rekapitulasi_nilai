@@ -11,7 +11,7 @@
 
 
                 <div class="d-flex flex-lg-row flex-column gap-2 gap-lg-0 justify-content-between mb-4">
-                    <div class="d-flex align-items-center gap-2">
+                    <!-- <div class="d-flex align-items-center gap-2">
                         <button type="button" class="btn bg-pink px-4 text-white">Cari</button>
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -19,9 +19,9 @@
                             </div>
                             <input type="text" class="form-control" placeholder="Pencarian Dosen" aria-label="Pencarian Mahasiswa" aria-describedby="btnGroupAddon">
                           </div>
-                    </div>
+                    </div> -->
                     <div class="d-flex justify-content-between gap-3">
-                        <button type="button" class="btn bg-success text-white">Cetak</button>
+                        <!-- <button type="button" class="btn bg-success text-white">Cetak</button> -->
                         <a href="./tambah.php">
                             <button type="button" class="btn bg-pink text-white">Registrasi Dosen</button>
                         </a>

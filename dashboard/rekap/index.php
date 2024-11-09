@@ -36,20 +36,26 @@
                 <!-- search -->
 
                 
-                <form method="GET">
+                <?php
+                if($role=="admin"):
+                    ?>
+                    <form method="GET">
                     
-                <div class="input-group mb-3 mt-3">
-
-                    <input type="text" name="key" class="form-control" placeholder="Cari Nama/NIM"
-                        aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <input type="hidden" name="id" value="<?=$id?>"/>
-                        <!-- <a href="./edit.html"> -->
-                            <button type="submit" class="btn text-white bg-pink">Cari</button>
-                        <!-- </a> -->
-                    </div>
-                    </div>
-                </form>
+                    <div class="input-group mb-3 mt-3">
+    
+                        <input type="text" name="key" class="form-control" placeholder="Cari Nama/NIM"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <input type="hidden" name="id" value="<?=$id?>"/>
+                            <!-- <a href="./edit.html"> -->
+                                <button type="submit" class="btn text-white bg-pink">Cari</button>
+                            <!-- </a> -->
+                        </div>
+                        </div>
+                    </form>
+                    <?php
+                endif;
+                ?>
 
                 <!--  -->
                 <div class="border px-3 py-2 mt-2">

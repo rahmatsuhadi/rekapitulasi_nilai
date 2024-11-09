@@ -5,7 +5,20 @@
 
 include_once "../src/Model/GradeModel.php";
 $model = new Grade();
-$gradeList = $model->getAllGrade();
+
+$id = $_SESSION['user_id'];
+if($role=="student"){
+    $gradeList = $model->getAllGradeByStudentId($id);
+}
+else if($role=="dosen"){
+    $gradeList = $model->getAllGradeByDosenId($id);
+}
+else{
+    $gradeList = $model->getAllGrade();
+}
+
+
+
 
 ?>
 
@@ -41,6 +54,17 @@ $gradeList = $model->getAllGrade();
                 </div>
                 <!--  -->
 
+                <?php 
+                if($role=="admin"):
+                    ?> <div class="d-flex justify-content-end mb-2">
+                    <a href="./tambah-kelas.php" class="btn bg-pink text-white ">Tambah</a>
+                    </div>
+
+                    <?php
+                endif;
+                ?>
+               
+
 
                 <div class="table-responsive">
                     <table class="table table-borderless table-custom" id="table">
@@ -50,6 +74,13 @@ $gradeList = $model->getAllGrade();
                                 <th scope="col">Dosen</th>
                                 <th scope="col">Waktu</th>
                                 <th scope="col">Online</th>
+                                <?php if($role=="admin"):
+                                ?>    
+                                <th scope="col">Action</th>
+                                <?php
+                                endif;
+                                ?>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -57,7 +88,7 @@ $gradeList = $model->getAllGrade();
                             <tr>
                                 <td scope="row">
                                     <div>
-                                        <a href="/dashboard/rekap/index.php?id=<?=$grade['id']?>" class="">
+                                        <a  href="<?= $role != 'student' ? '/dashboard/rekap/index.php?id=' . $grade['id'] : '/dashboard/detail.php?course_id=' .$grade['course_id'] ; ?>"  class="">
                                             <h5 class="fs-6 fw-bold">
                                             <?=$grade['name']?></h5>
                                         </a>
@@ -82,6 +113,16 @@ $gradeList = $model->getAllGrade();
                                     ?>
 
                                 </td>
+                                <?php if($role=="admin"):
+                                ?>    
+                                <td>
+                                    <a href="./delete-kelas.php?id=<?=$grade['id']?>">
+                                   Delete
+                                    </a>
+                                </td>
+                                <?php
+                                endif;
+                                ?>
 
                             </tr>
                             <?php endforeach;?>

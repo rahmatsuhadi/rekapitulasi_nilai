@@ -42,11 +42,11 @@ class Mahasiswa extends User {
         $sql = "SELECT user.*, 
        course.id AS id_course, 
        course.grade_id AS course_grade_id 
-FROM user
-LEFT JOIN course ON course.student_id = user.id AND course.grade_id = 1
-WHERE user.role = 'student'
-  AND (user.full_name LIKE '%$search%' OR user.identity LIKE '%$search%')
-";
+        FROM user
+        LEFT JOIN course ON course.student_id = user.id AND course.grade_id = $id_grade
+        WHERE user.role = 'student'
+        AND (user.full_name LIKE '%$search%' OR user.identity LIKE '%$search%')
+        ";
         $result = $this->connect->query($sql);
 
         
@@ -56,6 +56,7 @@ WHERE user.role = 'student'
                 $mahasiswaList[] = $row;
             }
         }
+
 
         return $mahasiswaList;
     }

@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 <!-- header -->
                 <div class="p-1 w-lg-50" >
-                    <h4 class="text-center mb-4">Masuk Dashboard Dosen</h4>
+                    <h4 class="text-center mb-4">Masuk Dashboard</h4>
 
                     <p class="text-center mb-4 m-auto fs-6" style="max-width: 70%;" >Masukan indentitas anda untuk mengakses dashboard</p>
                     <?php
@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <form  method="POST">
                         <div class="mb-3 mt-3">
                             <!-- <label for="email" class="form-label">Nomor:</label> -->
-                            <input name="identity" type="text" class="form-control border-input-pink  form-control-md mb-4" id="email" placeholder="Nomor Induk Dosen" name="email">
+                            <input name="identity" type="text" class="form-control border-input-pink  form-control-md mb-4" id="email" placeholder="Nomor Identity" name="email">
                         </div>
                         <div class="mb-3">
                             <!-- <label for="pwd" class="form-label">Password:</label> -->

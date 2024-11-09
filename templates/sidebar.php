@@ -46,7 +46,7 @@ $role = $_SESSION['role'];
                     </a>
                 </li>
                 <?php endif; ?>
-                <?php if($role=="admin" || $role=="dosen"):?>
+                <?php if($role=="admin"):?>
                 <li class="sidebar-item">
                     <a href="/dashboard/mahasiswa" class="link-item">
                         <i class="fa-solid fa-users" style="height: 30px; width: 30px;"></i>
